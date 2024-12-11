@@ -1,0 +1,111 @@
+/**
+
+@page L02 Zmienne
+Poniżej przykład trzech zmiennych zadeklarowanych w języku Python: zmienna całkowitoliczbowa, zmienna zmiennoprzecinkowa 
+i zmienna napisowa.
+@code{.py}
+# Przykłady zmiennych różnego typu.
+n = 10
+x = 3.1415
+s = "10001"
+print(n)
+print(x)
+print(s)
+@endcode
+Jak już wspomniano we wstępie, typ zmiennej przypisywany jest na podstawie kontekstu jej inicjalizacji. Informację o tym, 
+jakiego typu jest zmienna można uzyskać stosując funkcję <tt>type</tt>.
+@code{.py}
+print(type(n))
+print(type(x))
+print(type(s))
+@endcode
+
+@todo
+Zdefiniuj własne zmienne całkowitoliczbowe, zmiennoprzecinkowe i napisowe. Wydrukuj ich wartości oraz informację o typie.
+
+Typ zmiennej całkowicie determinuje jej dalsze zachowanie. Na przykład zmienne napisowe podczas operacji dodawania są 
+sklejane, co oznacza, że <tt>"3"+"3"</tt> daje nam <tt>"33"</tt>, a nie <tt>"6"</tt>. Poniżej kod, który ilustruje 
+zachowanie zmiennych różnego typu podczas wykonywania operacji dodawania.
+@code{.py}
+x = str(3)
+y = int(3)
+z = float(3)
+print(x+x)
+print(y+y)
+print(z+z)
+@endcode
+
+@todo
+Przetestuj możliwość dodawania do siebie zmiennych różnego typu. Na przykład spróbuj wykonać <tt>x+y</tt>, <tt>y+z</tt> 
+lub <tt>x+z</tt>. Jakie są wyniki tego rodzaju działań?
+
+Język Python definiuje kilkanaście podstawowych typów danych. Pierwszym z nich jest poznany już wcześniej typ napisowy.
+@code{.py}
+x = "Hello World"
+print(type(x))
+print(x)
+@endcode
+Mamy też trzy typy liczbowe. Jednym z nich są liczby całkowite.
+@code{.py}
+x = 20
+print(type(x))
+print(x)
+@endcode
+Kolejnym liczby zmiennoprzecinkowe.
+@code{.py}
+x = 3.141592
+print(type(x))
+print(x)
+@endcode
+Trzeci to liczby zespolone, ale to wykracza poza program nauczania.
+
+Istnieje też sześć wbudowanych typów, które reprezentują zbiorowości elementów. Omówimy tutaj jedynie cztery najbardziej 
+podstawowe i najczęściej wykorzystywane. Pierwszym z takich typów jest lista. Ten typ danych będzie szczegółowo omawiany 
+w jednym z kolejnych rozdziałów.
+@code{.py}
+x = ["apple", "banana", "cherry"]
+print(type(x))
+print(x)
+@endcode
+
+@todo
+Zdefiniuj i wydrukuj własną listę. Może to być na przykład lista liczb Fibonacciego z poprzednich zajęć, lista liczb 
+podzielnych przez 7 itp.
+
+Kolejną zbiorowością jest krotka. Ten typ danych różni się od listy tym, że jego długość jest ustalona. To znaczy nie 
+można dodawać, ani zabierać elementów z krotki.
+@code{.py}
+x = ("apple", "banana", "cherry")
+print(type(x))
+print(x)
+@endcode
+Trzecim typem reprezentującym zbiorowość jest zasięg. Jest to typ szczególnie przydatny przy realizacji pętli.
+@code{.py}
+x = range(6)
+print(type(x))
+print(x)
+@endcode
+Kolejnym typem, któremu w dalszej części materiału poświęcone zostanie sporo uwagi jest słownik. W przeciwieństwie 
+do listy, w której elementy numerowane są indeksami zaczynającymi się od 0, elementy słownika indeksowane są dowolnymi 
+kluczami. Klucze w deklaracji słownika występują po lewej stronie, a odpowiadające im wartości zapisane są po znaku 
+dwukropka.
+@code{.py}
+x = {"name" : "John", "age" : 36}
+print(type(x))
+print(x)
+@endcode
+
+@todo
+Zdefiniuj własny słownik. Może to być na przykład słownik reprezentujący Twoje świadectwo. W takim przypadku 
+kluczami powinny być nazwy przedmiotu, a wartościami oceny w formie liczb. Można też zdefiniować kolejny 
+słownik, w którym kluczami są oceny w formie liczb, a odpowiadają im wartości w formie oceny napisowej, 
+na przykład <tt>6: "celujący"</tt>. Jakie inne słowniki można zaproponować?
+
+Istnieje też typ logiczny, którego zmienne przyjmują jedynie dwie wartości -- <tt>True</tt> i <tt>False</tt>.
+@code{.py}
+x = True
+print(type(x))
+print(x)
+@endcode
+
+*/

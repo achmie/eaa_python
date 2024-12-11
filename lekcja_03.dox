@@ -1,0 +1,79 @@
+/**
+
+@page L03 Operatory arytmetyczne
+Same zmienne nie tworzą jednak programu. Aby możliwe było przetwarzanie danych, konieczna jest możliwość operowania 
+na zdefiniowanych wcześniej zmiennych. Na poziomie podstawowym operacje takie realizuje się za pomocą operatorów. 
+Są to funkcje (najczęściej dwuargumentowe), których argumentami są zmienne. Charakterystyczna jest jednak dla nich 
+notacja. O ile funkcja dwuargumentowa ma postać <tt>f(x,y)</tt>, tak operator umieszczany jest pomiędzy argumentami. 
+Na przykład <tt>x + y</tt> dla funkcji dodawania lub <tt>x * y</tt> dla funkcji mnożenia.\newline
+
+Język Python definiuje kilka grup operatorów. Pierwszą z nich stanowią operatory arytmetyczne. Poniżej przykład 
+pokazujący użycie operatora dodawania.
+@code{.py}
+x = 10
+y = 3
+z = x + y
+print("{} + {} = {}".format(x, y, z))
+@endcode
+Przykład użycia operatora odejmowania.
+@code{.py}
+x = 10
+y = 3
+z = x - y
+print("{} - {} = {}".format(x, y, z))
+@endcode
+Przykład użycia operatora mnożenia.
+@code{.py}
+x = 10
+y = 3
+z = x * y
+print("{} * {} = {}".format(x, y, z))
+@endcode
+Przykład użycia operatora dzielenia. Zauważmy, że argumentami tej operacji są liczby całkowite, ale wynik jest już 
+liczbą zmiennoprzecinkową.
+@code{.py}
+x = 10
+y = 3
+z = x / y
+print("{} / {} = {}".format(x, y, z))
+@endcode
+Dlatego język Python wprowadza specjalny operator wyznaczający iloraz jako liczbę całkowitą. Zauważmy zmianę wyniku 
+w wyniku działania takiego właśnie operatora.
+@code{.py}
+x = 10
+y = 3
+z = x // y
+print("{} // {} = {}".format(x, y, z))
+@endcode
+
+@todo
+Wyznacz ilorazy całkowitoliczbowe dla liczb zmiennoprzecinkowych. Na przykład <tt>2.5 // 1.2</tt> lub 
+<tt>13 // 3.141592</tt>. Spróbuj najpierw odpowiedzieć, jaki wynik uzyskasz, a następnie zweryfikuj go w programie.
+
+Mamy też do dyspozycji specjalny operator, który wyznacza resztę z dzielenia.
+@code{.py}
+x = 10
+y = 3
+z = x % y
+print("{} % {} = {}".format(x, y, z))
+@endcode
+Ostatnim dostępnym operatorem arytmetycznym jest potęgowanie.
+@code{.py}
+x = 10
+y = 3
+z = x ** y
+print("{} ** {} = {}".format(x, y, z))
+@endcode
+
+@todo
+Ustal zmienną <tt>p = 7</tt>. Wybierz dowolną liczbę naturalną <tt>a</tt> i podnieś ją do potęgi <tt>6</tt>. Przypisz 
+otrzymany wynik na pewną zmienną <tt>b</tt>. Wyznacz reszty z dzielenia <tt>r = a \% p</tt> oraz <tt>s = b \% p</tt>. 
+Powtarzaj eksperyment dla innych liczb <tt>a</tt>. Powinieneś zaobserwować, że liczba <tt>s</tt> przyjmuje jedynie 
+wartości 0 lub 1. Przy czym wartość 0 przyjmowana jest jedynie wtedy, gdy również <tt>a</tt> ma wartość 0.
+
+@todo
+Przeprowadź eksperyment z poprzedniego ćwiczenia dla innych liczb <tt>p</tt>. Na przykład każdy uczeń może wybrać inną 
+liczbę. Wyniki eksperymentu będą identyczne w przypadku tych uczniów, którzy jako <tt>p</tt> wybrali liczbę pierwszą. 
+Jest to konsekwencją tak zwanego <i>Małego Twierdzenia Fermata</i>.
+
+*/

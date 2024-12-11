@@ -1,0 +1,87 @@
+/**
+
+@page L01 Podstawowe pojęcia
+Mamy dwa sposoby dodawania komentarzy do kodu programu. Pierwszym z nich jest użycie krzyżyka (<tt>#</tt>), 
+który oznacza, że właśnie rozpoczyna się komentarz, który trwa do końca linii. Poniżej przykład wprowadzenia 
+komentarza jednolinijkowego.
+@code{.py}
+# To jest komentarz.
+@endcode
+Innym sposobem jest wstawienie trzech znaków pojedynczego cudzysłowu (<tt>'''</tt>). Taki komentarz może być 
+rozciągnięty na wiele linii. Kończy się bowiem w momencie, gdy pojawia się kolejne trzy znaki pojedynczego 
+cudzysłowu (<tt>'''</tt>). Wszystko, co znajduje się pomiędzy tymi znacznikami traktowane jest jak komentarz 
+i pomijane przez interpreter kodu. Poniżej przykład komentarza wielolinijkowego.
+@code{.py}
+'''
+To jest komentarz
+na kilka linijek
+...
+...
+...
+I tak dalej ...
+'''
+@endcode
+Aby móc przeprowadzać działania, konieczne jest wprowadzenie zmiennych. Poniższy kod prezentuje, jak deklarować 
+zmienne w języku Python.
+@code{.py}
+# Deklaracja zmiennej całkowitoliczbowej.
+n = 10
+# Deklaracja zmiennej zmiennoprzecinkowej.
+x = 10.0
+@endcode
+Jeżeli po wykonaniu serii obliczeń chcemy wypisać wartość zmiennej na ekran, to wywołujemy funkcję <tt>print</tt>. 
+Jest to funkcja, która przekształca zmienną na napis, a następnie drukuje reprezentację zmiennej na ekranie. 
+Poniżej przykładowy kod drukujący zmienne.
+@code{.py}
+# Drukowanie wartości na ekranie.
+print(n)
+print(x)
+
+# Wydrukowanie napisu.
+print('Hello, World!')
+@endcode
+
+@todo
+Zdefiniuj zmienne <tt>a=3</tt>, <tt>b=4</tt> i <tt>c=5</tt> i wydrukuj na ekran wartości wyrażeń <tt>a*a+b*b</tt> 
+oraz <tt>c*c</tt>. Wydrukuj na ekran wartość wyrażenia <tt>a*a+b*b-c*c</tt>.
+
+Do tworzenia bardziej złożonych napisów wykorzystywana jest funkcja <tt>format</tt>. Działa ona na napis, w którym 
+umieszczono nawiasy klamrowe <tt>{}</tt>. Symbolizują one kolejne zmienne podawane jako argumenty funkcji formatującej. 
+Poniższy kod przedstawia przykład wykorzystania funkcji do formatowania napisów.
+@code{.py}
+a = 3
+b = 4
+c = 5
+print("a={}, b={}, c={}".format(a, b, c))
+@endcode
+
+@todo
+Zdefiniuj zmienne <tt>a=6</tt>, <tt>b=8</tt> i <tt>c=10</tt>. Użyj funkcji <tt>format</tt>, aby wypisać napis 
+następującej postaci <tt>"a=NN, b=NN, c=NN, a**2+b**2-c**2=NN"</tt>, gdzie <tt>NN</tt> jest odpowiednią wartością 
+liczbową zadaną przez zmienną lub wyrażenie arytmetyczne.
+
+Bardziej zaawansowane użycie funkcji formatującej możliwe jest przez wpisanie odpowiednich informacji do nawiasów 
+klamrowych. Jedną z takich informacji może być na przykład indeks zmiennej, która ma zostać umieszczona w danym 
+miejscu napisu. Należy jednak pamiętać, że zmienne podane jako argumenty numerowane są od zera. Poniżej kod 
+wykorzystujący indeksację zmiennych.
+@code{.py}
+a = 3
+b = 4
+c = 5
+print("a={1}, b={0}, c={2}".format(b, a, c))
+@endcode
+Inną metodą odwołania się do konkretnych zmiennych jest ich etykietowanie. W poniższym przykładzie etykietami 
+są <tt>na</tt>, <tt>nb</tt> i <tt>nc</tt>.
+@code{.py}
+print("a={na}, b={nb}, c={nc}".format(nb=b, nc=c, na=a))
+@endcode
+
+@todo
+Ciąg Fibonacciego, to ciąg liczb zaczynający się od dwóch wartości 0, 1. Każda kolejna wartość w tym ciągu powstaje 
+przez dodanie do siebie dwóch ostatnich wartości. W związku z tym, trzy pierwsze wyrazy mają postać 0, 1, 1. 
+Natomiast cztery pierwsze wyglądają następująco 0, 1, 1, 2. Następna w ciągu jest liczba 3, gdyż jest sumą 1 i 2. 
+Napisz program, który wyznaczy 10 pierwszych wyrazów ciągu Fibonacciego w postaci zmiennych <tt>f0, f1, f2, ..., f9</tt>. 
+Użyj dodawania zmiennych, aby wyznaczyć wszystkie zmienne od <tt>f2</tt> do <tt>f9</tt>. Użyj funkcji <tt>format</tt> 
+do zaprezentowania wyniku.
+
+*/

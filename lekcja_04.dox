@@ -1,0 +1,78 @@
+/**
+
+@page L04 Konwersja z różnych systemów pozycyjnych
+System pozycyjny jest jednym z najważniejszych osiągnięć arytmetyki. Jego wprowadzenie spowodowało znaczne 
+uproszczenie i przyspieszenie obliczeń. Dodawanie, odejmowanie, mnożenie i dzielenie są bowiem dużo łatwiejsze 
+w systemie pozycyjnym niż na przykład w notacji rzymskiej. W codziennym życiu wykorzystujemy system dziesiętny, 
+który na dobre zagościł we wszystkich kulturach i językach. Nie jest on jednak jedynym systemem pozycyjnym, 
+z którego tak wszechstronnie korzystamy. Drugim jest system binarny (dwójkowy) --  zaszyty głęboko we wszystkich 
+urządzeniach posiadających procesory. W telefonach, laptopach i komputerach wszystko jest liczbą zapisaną 
+w postaci binarnej.
+
+<b>Przykład:</b> System pozycyjny charakteryzuje liczba nazywana podstawą systemu. W przypadku systemu dziesiętnego 
+jest to liczba 10. Ciąg cyfr zapisany w tym systemie dekodujemy następująco
+@f{align*}{
+    (10011)_{10} = 1 \cdot 10^4 + 0 \cdot 10^3 + 0 \cdot 10^2 + 1 \cdot 10^1 + 1 \cdot 10^0.
+\f}
+Ponieważ użyliśmy tylko cyfr $0$ i $1$, to ten sam ciąg cyfr może być użyty do reprezentowania liczy w systemie 
+binarnym, czyli systemie pozycyjnym o podstawie 2
+@f{align*}{
+    (10011)_{2} = 1 \cdot 2^4 + 0 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0.
+\f}
+Można łatwo policzyć, że liczba @f$(10011)_{2}@f$ odpowiada liczbie @f$(19)_{10}@f$.
+
+@todo
+Opierając się na przykładzie oblicz, jakie liczby kryją się pod następującym ciągiem cyfr zapisanym w różnych 
+systemach pozycyjnych: @f$(11001)_{2}@f$, @f$(11001)_{3}@f$, @f$(11001)_{5}@f$.
+
+Poniższy program konwertuje liczby zapisane w ćwiczeniu i drukuje je na ekranie w systemie dziesiętnym.
+@code{.py}
+# Wczytaj ciąg cyfr "11001" w systemie o podstawie 2.
+n = int("11001", 2)
+print(n)
+# Wczytaj ciąg cyfr "11001" w systemie o podstawie 3.
+n = int("11001", 3)
+print(n)
+# Wczytaj ciąg cyfr "11001" w systemie o podstawie 5.
+n = int("11001", 5)
+print(n)
+@endcode
+W przedstawionych przykładach operowaliśmy jedynie cyframi 0 i 1. Mają one tę zaletę, że występują we wszystkich 
+systemach pozycyjnych. Należy bowiem pamiętać, że system pozycyjny ma dokładnie tyle cyfr ile wynosi jego podstawa. 
+Na przykład w systemie pozycyjnym o podstawie 5 mamy do dyspozycji cyfry: 0, 1, 2, 3 i 4.
+
+@todo
+Napisz program, który zdekoduje liczby @f$(12)_{3}@f$, @f$(123)_{4}@f$, @f$(1234)_{5}@f$ i @f$(123456)_{7}@f$. 
+Spróbuj zweryfikować poprawność działania programu poprzez wykonanie rachunków pisemnych.
+
+Skoro każda cyfra musi mieć swój symbol, to co się dzieje, jeżeli chcemy reprezentować liczby w systemach 
+pozycyjnych o podstawie większej niż 10? Otóż w takiej sytuacji wykorzystywane są kolejne litery alfabetu.
+
+<b>Przykład:</b> W systemie o podstawie 16 cyframi są: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A (10), B (11), C (12), 
+D (13), E (14) i F (15). Dekodowanie liczby wygląda w takim systemie następująco:
+@f{align*}{
+    (\text{ABCDEF})_{16} &= 10 \cdot 16^5 + 11 \cdot 16^4 + 12 \cdot 16^3 + 13 \cdot 16^2 + \\
+    &\quad\ 14 \cdot 16^1 + 15 \cdot 16^0.
+@f}
+
+@todo
+Napisz program dekodujący liczby @f$(\text{ABCDEF})_{16}@f$ i @f$(\text{ABCDEFG})_{17}@f$.
+
+Poniższy fragment kodu pokazuje, jak zdekodować liczby z poprzedniego ćwiczenia.
+@code{.py}
+n = int("ABCDEF", 16)
+print(n)
+n = int("ABCDEFG", 17)
+print(n)
+@endcode
+Z racji tego, że liter w alfabecie łacińskim jest tylko 26, to razem z~cyframi arabskimi mamy do dyspozycji 
+36 znaków. Liczba ta wyznacza równocześnie maksymalną podstawę systemu pozycyjnego, który jest obsługiwany 
+przez język Python.
+
+@todo
+Napisz program dekodujący liczbę @f$(\text{XYZ})_{36}@f$ oraz program dekodujący liczbę @f$(\text{XYZ})_{37}@f$. 
+Co się stało podczas dekodowania liczby o podstawie 37?
+
+
+
+*/
